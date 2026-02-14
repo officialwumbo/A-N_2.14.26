@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines 2.14.26❤️</title>
+    <style>
+        :root {
+            --pink: #ffafcc;
+            --dark-pink: #fb6f92;
+            --cream: #fff0f3;
+            --matcha-green: #a7c957;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--cream);
+            color: #444;
+            overflow-x: hidden;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(255,175,204,0.4), rgba(251,111,146,0.4));
+        }
+
+        h1 { font-size: clamp(2rem, 8vw, 4rem); color: var(--dark-pink); margin: 0; text-shadow: 2px 2px #fff; }
+        .subtitle { font-size: 1.5rem; font-style: italic; margin-top: 10px; }
+        .click-hint { margin-top: 20px; font-weight: bold; color: var(--dark-pink); animation: blink 1.5s infinite; }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* Polaroid Gallery */
+        .gallery {
+            padding: 50px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 50px 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: rotate(var(--r));
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover { transform: scale(1.05) rotate(0deg); z-index: 5; }
+        .polaroid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+
+        /* Matcha Game Area */
+        #game-area {
+            height: 600px;
+            background: #f1f8e9;
+            margin: 60px 0;
+            position: relative;
+            border-top: 4px solid var(--matcha-green);
+            border-bottom: 4px solid var(--matcha-green);
+            overflow: hidden;
+        }
+
+        #matcha-target {
+            position: absolute;
+            width: 120px;
+            transition: all 0.2s ease-out;
+            z-index: 10;
+        }
+
+        /* The Letter */
+        .letter-wrap {
+            max-width: 800px;
+            margin: 80px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 2px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.05);
+            line-height: 1.8;
+            text-align: left;
+            border-left: 5px solid var(--dark-pink);
+        }
+
+        .hindi-text {
+            color: var(--dark-pink);
+            font-size: 1.3rem;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer { padding: 40px; font-style: italic; color: var(--dark-pink); }
+        
+        /* Hidden Audio Div */
+        #player { display: none; }
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <div id="player"></div>
+
+    <header>
+        <h1>Happy Valentine’s Day, Nami Bear! 🐻❤️</h1>
+        <p class="subtitle">From Yushu with Love</p>
+        <p class="click-hint">Click anywhere to start our date...</p>
+    </header>
+
+    <h2 style="color: var(--dark-pink); margin-top: 50px;">Nami and Yushu's Journey So Far! 🥹🤍🧡🔒</h2>
+    <div class="gallery">
+        <script>
+            for(let i=1; i<=10; i++) {
+                const rotation = (Math.random() * 16 - 8) + 'deg';
+                document.write(`
+                    <div class="polaroid" style="--r: ${rotation}">
+                        <img src="${i}.jpg" alt="Memory ${i}" onerror="this.src='https://via.placeholder.com/300?text=Photo+${i}'">
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+
+    <section id="game-area">
+        <h2 id="game-title" style="padding-top: 20px; color: #556b2f;">Get the Matcha Nam Wam! 🍵</h2>
+        <p id="game-subtitle">Try to catch your favorite drink...</p>
+        <img src="matcha.png" id="matcha-target" alt="Matcha" style="top: 50%; left: 50%;" onerror="this.src='https://via.placeholder.com/100?text=Matcha'">
+    </section>
+
+    <div class="letter-wrap">
+        <p><strong>Happy Valentine’s Day, Nami Bear!</strong></p>
+        
+        <p>I was just sitting here thinking back to that boba date we went on a year and a half ago. It feels like just yesterday we were sitting there with our drinks, yet so much has happened since then. It’s honestly wild to think that this is already our second Valentine’s Day together. Time really does fly when I’m with you, honey.</p>
+        
+        <p>I want you to know how deeply I love you. You aren’t just my girlfriend; you’re my person, my pumpkin, and the only one I ever want to share my life with. My Nami Wami, you have my whole heart, and that’s never going to change. Each day I wake up, my mind recalls you, and as each second of each minute passes, thoughts of you occupy my mind. You have my whole heart and soul, princess, and I am so grateful for every moment we share together.</p>
+
+        <p>We’ve had some amazing times so far, but we have so many more adventures to go on. I promise I’m going to take you to Paris someday, Nam Wam! We’re going to see the Eiffel Tower, travel everywhere else in the world, and just experience it all side-by-side. I want to live out every single day of my life with you.</p>
+
+        <p>You’re the only one for me, Nami.</p>
+        
+        <div class="hindi-text">
+            Tum meri sab kuch ho,<br>
+            Main tumse bahut pyaar karta hoon.<br>
+            Hamesha mere saath rehna,<br>
+            Tum hi meri jaan ho
+        </div>
+
+        <p style="text-align: right; margin-top: 40px;">With all the love in the world,<br><strong style="font-size: 1.5rem;">Yushu</strong></p>
+    </div>
+
+    <footer>
+        <p>Made for the one and only Naamya Sinha ❤️🔥</p>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        let player;
+        let musicStarted = false;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'W1y8blwMLxY',
+                playerVars: {
+                    'autoplay': 0,
+                    'loop': 1,
+                    'playlist': 'W1y8blwMLxY'
+                }
+            });
+        }
+
+        function playMusic() {
+            if (!musicStarted && player && player.playVideo) {
+                player.playVideo();
+                musicStarted = true;
+                const hint = document.querySelector('.click-hint');
+                if(hint) hint.style.display = 'none';
+            }
+        }
+
+        // Matcha Chase Logic
+        const target = document.getElementById('matcha-target');
+        const area = document.getElementById('game-area');
+        const gameTitle = document.getElementById('game-title');
+        const gameSubtitle = document.getElementById('game-subtitle');
+        let moveCount = 0;
+
+        target.addEventListener('mouseover', () => {
+            if (moveCount < 8) {
+                const maxX = area.clientWidth - target.clientWidth;
+                const maxY = area.clientHeight - target.clientHeight;
+                
+                const newX = Math.random() * maxX;
+                const newY = Math.random() * maxY;
+                
+                target.style.left = newX + 'px';
+                target.style.top = newY + 'px';
+                moveCount++;
+            }
+        });
+
+        target.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            gameTitle.innerText = "YAY YOU DID IT! ❤️🍵";
+            gameSubtitle.innerText = "You caught it!";
+            alert("YAY YOU CAUGHT ME");
+        });
+    </script>
+</body>
+</html>
